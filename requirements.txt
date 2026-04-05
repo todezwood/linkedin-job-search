@@ -1,0 +1,5 @@
+anthropic
+apify-client
+gspread
+google-auth
+python-dotenv

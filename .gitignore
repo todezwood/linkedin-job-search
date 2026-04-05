@@ -1,0 +1,49 @@
+# Environments
+.env
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pipeline runtime artifacts
+pipeline.log
+pipeline.lock
+cron.log
+*.db
+*.db-shm
+*.db-wal
+*.db.bak
+*.db.bak-shm
+*.db.bak-wal
+
+# Claude Code local settings
+.claude/
+
+# Credentials (never commit)
+credentials.json
+
+# n8n legacy (not part of this project)
+.n8n/
+.cache/
+nodes/
+storage/
+database.sqlite*
+n8nEventLog*
+docker-compose.yml
+crash.journal
+n8n_llm_prompt.md
+DECISIONS.md
+
+# Old root-level files (replaced by pipeline/ package)
+fix_sheet.py
+insert_mock_job.py
+test_anthropic.py
+test_extraction.py
+test_inject.py
+
+# OS generated files
+.DS_Store
+._*
+.Trash-*

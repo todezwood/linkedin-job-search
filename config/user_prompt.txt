@@ -1,0 +1,31 @@
+Evaluate the following job posting and return a JSON score.
+
+Job Title: {{ $json.title }}
+Company: {{ $json.companyName }}
+Location: {{ $json.location }}
+Contract Type: {{ $json.contractType }}
+Experience Level: {{ $json.experienceLevel }}
+Salary / Compensation: {{ $json.salary }}
+Job Description:
+{{ $json.description }}
+
+Return ONLY a valid JSON object using this exact structure:
+
+{
+  "total_score": <number 0–102>,
+  "rating": "<Top Priority | Strong Fit | Possible | Skip>",
+  "compensation_score": <number 0–30>,
+  "compensation_reason": "<one sentence>",
+  "role_alignment_score": <number 0–25>,
+  "role_alignment_reason": "<one sentence>",
+  "prestige_score": <number 0–30>,
+  "prestige_reason": "<one sentence>",
+  "location_score": <number 0–15>,
+  "location_reason": "<one sentence>",
+  "work_arrangement_score": <number 0–2>,
+  "work_arrangement_reason": "<one sentence>",
+  "summary": "<one sentence summary of why this job did or did not score well>",
+  "normalized_salary": "<Extracted annual compensation (Base + Equity/OTE if listed). If hourly, calculate annual. If absolutely nothing is found, strictly output 'Not Provided'>",
+  "normalized_work_type": "<Remote | Hybrid | In-Office | Unspecified>",
+  "normalized_location": "<extracted primary city/state. If multiple, list top 2 + '(& X more)'>"
+}
